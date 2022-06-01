@@ -21,8 +21,9 @@ Usefull information for this project:
     - source /opt/ros/noetic/setup.bash
     - source /home/baris/catkin_ws/devel/setup.bash (Prevents you to add your workspace source everytime you open a new terminal)
     - alias masterlaunch='roslaunch guided_research master.launch' (Creating alias for launching so you don't have to write long roslaunch command everytime)
-  - In rviz you can check different published topics by clicking add then clicking 
-  - After launch of gazebo and rviz you need to set the robots position on rviz manually. It can be done by selecting ... then clicking on the map.
-  - For gmapping you also need to launch teleop of turtlebot3 to navigate the robot
+  - In rviz you can check different published topics by clicking "Add" then clicking "By Topic"
+  - After launch of gazebo and rviz you need to set the robots position on rviz manually. It can be done by selecting "2D Pose Estimate" then clicking on the map,
+  - You can give the desired location to robot in rviz by clicking "2D Nav Goal" then clicking on the map,
+  - For gmapping you also need to launch teleop of turtlebot3 to navigate the robot.
 
 
