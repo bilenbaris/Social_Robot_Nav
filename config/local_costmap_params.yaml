@@ -1,0 +1,50 @@
+local_costmap:
+  # Frame and tf params
+  global_frame: odom
+  robot_base_frame: base_footprint
+  transform_tolerance: 0.5 
+
+  # Rate params
+  update_frequency: 10.0
+  publish_frequency: 10.0
+
+  # Map management params
+  static_map: false  
+  rolling_window: true
+  always_send_full_costmap: false
+
+  width: 3
+  height: 3
+  resolution: 0.05
+  origin_x: 0.0
+  origin_y: 0.0
+
+  plugins: 
+    - {name: static_layer,        type: "costmap_2d::StaticLayer"}
+    - {name: inflation_layer,     type: "costmap_2d::InflationLayer"}
+    - {name: obstacle_layer,      type: "costmap_2d::ObstacleLayer"}
+    - {name: social_layer,        type: "social_navigation_layers::ProxemicLayer"}
+    # - {name: social_pass_layer,   type: "social_navigation_layers::PassingLayer"}
+
+  static_layer:
+      enabled: true
+      map_topic: "/map"
+
+  inflation_layer:
+      enabled: true
+      cost_scaling_factor: 5
+      inflation_radius: 0.15
+
+  obstacle_layer:
+      observation_sources: scan
+      footprint_clearing_enabled: true
+      scan: {sensor_frame: base_scan, data_type: LaserScan, topic: scan, marking: true, clearing: true}
+    
+  social_layer:
+      enabled: true
+      cutoff: 10.0
+      amplitude: 77.0
+      covariance: 0.25
+      factor: 5.0
+      keep_time: 0.75
+        
