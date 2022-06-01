@@ -1,7 +1,7 @@
 # Social_Robot_Nav
 Socially Aware Robot Navigation on Ros.
 
-This is a autonomous robot navigation project with social awareness. This means robot can recognize humans and act accordingly while navigating.
+This is a autonomous robot navigation project with social awareness. This means robot can recognize humans and act accordingly while navigating in a known map.
 
 
 Few things to know about this project:
@@ -12,11 +12,11 @@ Few things to know about this project:
   - Uses navigation for navigation (http://wiki.ros.org/navigation),
   - Uses costmap_2d for cost map (http://wiki.ros.org/costmap_2d). Has 4 layers (Static, Inflation, Obstacle, Social) for cost map,
   - Uses social_navigation_layer for social layer  (http://wiki.ros.org/social_navigation_layers),
-  - Uses people for leg detection (http://wiki.ros.org/people). Uses senser info to guess where the legs are on the map.
+  - Uses people for leg detection (http://wiki.ros.org/people). Uses sensor info to guess where the legs are on the map.
 
-You can also find configuration and launch file for gmapping (http://wiki.ros.org/gmapping) of this project. 
+You can also find configuration and launch file for gmapping (http://wiki.ros.org/gmapping) in this project. 
 
-Usefull information using for this project:
+Usefull information for this project:
   - In .bashrc you can add this lines to make your work easier:
     - source /opt/ros/noetic/setup.bash
     - source /home/baris/catkin_ws/devel/setup.bash (Prevents you to add your workspace source everytime you open a new terminal)
