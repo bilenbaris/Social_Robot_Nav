@@ -1,7 +1,7 @@
 # Social_Robot_Nav
 Socially Aware Robot Navigation on Ros.
 
-This is a autonomous robot navigation project with social awareness. This means robot can recognize humans and act accordingly while navigating in a known map.
+This is a autonomous robot navigation project with social awareness. Robot can recognize humans and act accordingly while navigating in a known map. Also gives out SII (https://doi.org/10.1007/s12369-016-0352-0) values of robot to measure the affectiveness of social navigation.
 
 
 Few things to know about this project:
