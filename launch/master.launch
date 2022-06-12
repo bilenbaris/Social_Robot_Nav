@@ -5,7 +5,7 @@
   <arg name="x_pos" default="-3.0"/>
   <arg name="y_pos" default="3.0"/>
   <arg name="z_pos" default="0.0"/>
-  <!-- <arg name="scan" default="scan"/> -->
+  <arg name="laser_scan" default="scan"/>
 
   <!-- Gazebo -->
   <env name="GAZEBO_MODEL_PATH" value="$(find guided_research)/models:$(optenv GAZEBO_MODEL_PATH)"/>
@@ -22,7 +22,7 @@
   <!-- TurtleBot3 -->
   <include file="$(find turtlebot3_bringup)/launch/turtlebot3_remote.launch">
     <arg name="model" value="$(arg model)" />
-  </include>
+  </include>/
 
   <!-- Map Server -->
   <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
@@ -34,8 +34,18 @@
   <include file="$(find guided_research)/launch/move_base.launch"/>
 
   <!-- Leg Detector -->
-  <!-- <node pkg="leg_detector" type="leg_detector" name="leg_detector" args="scan:=base_scan $(find leg_detector)/config/trained_leg_detector.yaml" output="screen"/> -->
+  <include file="$(find leg_detector)/launch/leg_detector.launch"/>
 
+  <!-- People Publisher -->
+  <node pkg="guided_research" type="peoplePublisher.py" name="peoplePublisher"/>
+  <!-- <node pkg="guided_research" type="personPublisher.py" name="personPublisher"/> -->
+
+  <!-- Social Individual Index -->
+  <node pkg="guided_research" type="social_individual_index.py" name="social_individual_index"/>
+  
+  <!-- Rqt Plot -->
+  <node pkg="rqt_plot" type="rqt_plot" name="rqt_plot"/>
+  
   <!-- Rviz -->
   <node pkg="rviz" type="rviz" name="rviz" required="true" args="-d $(find guided_research)/rviz/rviz_navigation.rviz"/>
 

@@ -209,3 +209,11 @@ install(DIRECTORY launch maps
 catkin_install_python(PROGRAMS src/bot_move/turtlebot3_move.py DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 catkin_install_python(PROGRAMS src/bot_sensor_info/turtlebot3_sensor_info.py DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+catkin_install_python(PROGRAMS src/people_publisher/peoplePublisher.py DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+catkin_install_python(PROGRAMS src/people_publisher/personPublisher.py DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+catkin_install_python(PROGRAMS src/people_publisher/personPublisher2.py DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+catkin_install_python(PROGRAMS src/human_comfort_index/social_individual_index.py DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})

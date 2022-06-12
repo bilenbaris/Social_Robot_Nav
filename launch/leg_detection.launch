@@ -1,17 +1,5 @@
-
 <launch>
   <node pkg="leg_detector" type="leg_detector" name="leg_detector"
-        args="scan:=base_scan $(find leg_detector)/config/trained_leg_detector.yaml" output="screen"/>
+        args="scan:=scan" output="screen"/>
+        <rosparam file="$(find guided_research)/config/leg_detection_params.yaml" command="load" />
 </launch>
-<!-- <launch>
-  <!-- Arguments -->
-  <arg name="scan" default="scan"/>
-
-  <!-- Leg Detector -->
-  <node pkg="leg_detector" type="leg_detector" name="leg_detector" output="screen"/>
-    <param name="scan" value="$(arg scan)"/>
-    <rosparam command="load" file="$(find guided_research)/config/leg_detection_params.yaml"/>
-    <rosparam command="load" file="$(find leg_detector)/config/trained_leg_detector.yaml"/>
-    <remap from="scan" to="base_scan" />
-  </node>
-</launch> -->

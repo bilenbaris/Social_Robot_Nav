@@ -42,9 +42,17 @@ local_costmap:
     
   social_layer:
       enabled: true
-      cutoff: 10.0
+      cutoff: 25.0
       amplitude: 77.0
-      covariance: 0.25
+      covariance: 0.50
       factor: 5.0
       keep_time: 0.75
+
+#   social_pass_layer:
+#       enabled: true
+#       cutoff: 10.0
+#       amplitude: 77.0
+#       covariance: 0.25
+#       factor: 5.0
+#       keep_time: 0.75
         
