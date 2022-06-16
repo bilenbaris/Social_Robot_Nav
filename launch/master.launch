@@ -3,7 +3,7 @@
   <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
   <arg name="map_file" default="$(find guided_research)/maps/map.yaml"/>
   <arg name="x_pos" default="-3.0"/>
-  <arg name="y_pos" default="3.0"/>
+  <arg name="y_pos" default="1.5"/>
   <arg name="z_pos" default="0.0"/>
   <arg name="laser_scan" default="scan"/>
 
@@ -34,11 +34,11 @@
   <include file="$(find guided_research)/launch/move_base.launch"/>
 
   <!-- Leg Detector -->
-  <include file="$(find leg_detector)/launch/leg_detector.launch"/>
+  <!-- <include file="$(find leg_detector)/launch/leg_detector.launch"/> -->
 
   <!-- People Publisher -->
-  <node pkg="guided_research" type="peoplePublisher.py" name="peoplePublisher"/>
-  <!-- <node pkg="guided_research" type="personPublisher.py" name="personPublisher"/> -->
+  <!-- <node pkg="guided_research" type="peoplePublisher.py" name="peoplePublisher"/> -->
+  <node pkg="guided_research" type="personPublisher.py" name="personPublisher"/>
 
   <!-- Social Individual Index -->
   <node pkg="guided_research" type="social_individual_index.py" name="social_individual_index"/>

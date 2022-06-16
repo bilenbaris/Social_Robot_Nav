@@ -43,7 +43,7 @@ global_costmap:
   social_layer:
       enabled: true
       cutoff: 25.0
-      amplitude: 77.0
+      amplitude: 100.0
       covariance: 0.50
       factor: 5.0
       keep_time: 0.75
