@@ -1,7 +1,0 @@
-image: /home/baris/catkin_ws/src/social_robot_nav/maps/map1.pgm
-resolution: 0.025000
-origin: [-100.00000, -100.00000, 0.000000]
-negate: 0
-occupied_thresh: 0.65
-free_thresh: 0.196
-
