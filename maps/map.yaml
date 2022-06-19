@@ -1,4 +1,4 @@
-image: /home/baris/catkin_ws/src/guided_research/maps/map.pgm
+image: /home/baris/catkin_ws/src/social_robot_nav/maps/map.pgm
 resolution: 0.050000
 origin: [0.000000, 0.000000, 0.000000]
 negate: 0

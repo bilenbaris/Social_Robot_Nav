@@ -1,17 +1,17 @@
 <launch>
   <!-- Arguments -->
   <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
-  <arg name="map_file" default="$(find guided_research)/maps/map.yaml"/>
+  <arg name="map_file" default="$(find social_robot_nav)/maps/map.yaml"/>
   <arg name="x_pos" default="-3.0"/>
   <arg name="y_pos" default="1.5"/>
   <arg name="z_pos" default="0.0"/>
   <arg name="laser_scan" default="scan"/>
 
   <!-- Gazebo -->
-  <env name="GAZEBO_MODEL_PATH" value="$(find guided_research)/models:$(optenv GAZEBO_MODEL_PATH)"/>
+  <env name="GAZEBO_MODEL_PATH" value="$(find social_robot_nav)/models:$(optenv GAZEBO_MODEL_PATH)"/>
   
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find guided_research)/worlds/simple_office_with_people.world"/>
+    <arg name="world_name" value="$(find social_robot_nav)/worlds/simple_office_with_people.world"/>
     <arg name="paused" value="false"/>
   </include>
 
@@ -28,26 +28,26 @@
   <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
 
   <!-- AMCL -->
-  <include file="$(find guided_research)/launch/amcl.launch"/>
+  <include file="$(find social_robot_nav)/launch/amcl.launch"/>
 
   <!-- Move Base -->
-  <include file="$(find guided_research)/launch/move_base.launch"/>
+  <include file="$(find social_robot_nav)/launch/move_base.launch"/>
 
   <!-- Leg Detector -->
   <!-- <include file="$(find leg_detector)/launch/leg_detector.launch"/> -->
 
   <!-- People Publisher -->
-  <!-- <node pkg="guided_research" type="peoplePublisher.py" name="peoplePublisher"/> -->
-  <node pkg="guided_research" type="personPublisher.py" name="personPublisher"/>
+  <!-- <node pkg="social_robot_nav" type="peoplePublisher.py" name="peoplePublisher"/> -->
+  <node pkg="social_robot_nav" type="personPublisher.py" name="personPublisher"/>
 
   <!-- Social Individual Index -->
-  <node pkg="guided_research" type="social_individual_index.py" name="social_individual_index"/>
+  <node pkg="social_robot_nav" type="social_individual_index.py" name="social_individual_index"/>
   
   <!-- Rqt Plot -->
   <node pkg="rqt_plot" type="rqt_plot" name="rqt_plot"/>
   
   <!-- Rviz -->
-  <node pkg="rviz" type="rviz" name="rviz" required="true" args="-d $(find guided_research)/rviz/rviz_navigation.rviz"/>
+  <node pkg="rviz" type="rviz" name="rviz" required="true" args="-d $(find social_robot_nav)/rviz/rviz_navigation.rviz"/>
 
 
 </launch>

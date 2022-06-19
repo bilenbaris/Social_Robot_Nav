@@ -1,7 +1,7 @@
 <launch>
   <!-- Arguments -->
   <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
-  <arg name="map_file" default="$(find guided_research)/maps/map.yaml"/>
+  <arg name="map_file" default="$(find social_robot_nav)/maps/map.yaml"/>
 
   <!-- TurtleBot3 -->
   <include file="$(find turtlebot3_bringup)/launch/turtlebot3_remote.launch">
@@ -12,12 +12,12 @@
   <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
 
   <!-- AMCL -->
-  <include file="$(find guided_research)/launch/amcl.launch"/>
+  <include file="$(find social_robot_nav)/launch/amcl.launch"/>
 
   <!-- Move Base -->
-  <include file="$(find guided_research)/launch/move_base.launch"/>
+  <include file="$(find social_robot_nav)/launch/move_base.launch"/>
 
   <!-- Rviz -->
-  <node pkg="rviz" type="rviz" name="rviz" required="true" args="-d $(find guided_research)/rviz/rviz_navigation.rviz"/>
+  <node pkg="rviz" type="rviz" name="rviz" required="true" args="-d $(find social_robot_nav)/rviz/rviz_navigation.rviz"/>
 
 </launch>

@@ -4,14 +4,14 @@
   <!-- Move Base -->
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <!-- Cost Map Params -->
-    <rosparam file="$(find guided_research)/config/common_costmap_params.yaml" command="load" ns="global_costmap" />
-    <rosparam file="$(find guided_research)/config/common_costmap_params.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(find guided_research)/config/local_costmap_params.yaml" command="load" />
-    <rosparam file="$(find guided_research)/config/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find social_robot_nav)/config/common_costmap_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find social_robot_nav)/config/common_costmap_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find social_robot_nav)/config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find social_robot_nav)/config/global_costmap_params.yaml" command="load" />
 
     <!-- Planner Params -->
-    <rosparam file="$(find guided_research)/config/base_local_planner_params.yaml" command="load" />
-    <rosparam file="$(find guided_research)/config/global_planner_params.yaml" command="load" />
+    <rosparam file="$(find social_robot_nav)/config/base_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find social_robot_nav)/config/global_planner_params.yaml" command="load" />
   </node>
 
 </launch>

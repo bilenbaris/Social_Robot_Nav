@@ -8,10 +8,10 @@
   </include>
 
   <!-- Gmapping -->
-  <include file="$(find guided_research)/launch/gmapping.launch">
+  <include file="$(find social_robot_nav)/launch/gmapping.launch">
     <arg name="model" value="$(arg model)"/>
   </include>
 
   <!-- Rviz -->
-  <node pkg="rviz" type="rviz" name="rviz" required="true" args="-d $(find guided_research)/rviz/rviz_slam.rviz"/>
+  <node pkg="rviz" type="rviz" name="rviz" required="true" args="-d $(find social_robot_nav)/rviz/rviz_slam.rviz"/>
 </launch>

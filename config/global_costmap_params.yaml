@@ -24,7 +24,6 @@ global_costmap:
     - {name: inflation_layer,     type: "costmap_2d::InflationLayer"}
     - {name: obstacle_layer,      type: "costmap_2d::ObstacleLayer"}
     - {name: social_layer,        type: "social_navigation_layers::ProxemicLayer"}
-    # - {name: social_pass_layer,   type: "social_navigation_layers::PassingLayer"}
 
   static_layer:
       enabled: true
@@ -47,13 +46,3 @@ global_costmap:
       covariance: 0.50
       factor: 5.0
       keep_time: 0.75
-
-#   social_pass_layer:
-#       enabled: true
-#       cutoff: 10.0
-#       amplitude: 400.0
-#       covariance: 0.10
-#       factor: 5.0
-#       keep_time: 0.75
-      
-      

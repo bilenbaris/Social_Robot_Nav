@@ -6,10 +6,10 @@
   <arg name="z_pos" default="0.0"/>
 
   <!-- Gazebo -->
-  <env name="GAZEBO_MODEL_PATH" value="$(find guided_research)/models:$(optenv GAZEBO_MODEL_PATH)"/>
+  <env name="GAZEBO_MODEL_PATH" value="$(find social_robot_nav)/models:$(optenv GAZEBO_MODEL_PATH)"/>
   
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find guided_research)/worlds/simple_office_with_people.world"/>
+    <arg name="world_name" value="$(find social_robot_nav)/worlds/simple_office_with_people.world"/>
     <arg name="paused" value="false"/>
   </include>
 

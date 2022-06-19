@@ -1,4 +1,4 @@
-# Social_Robot_Nav
+# social_robot_nav
 Socially Aware Robot Navigation on Ros.
 
 This is a autonomous robot navigation project with social awareness. Robot can recognize humans and act accordingly while navigating in a known map. Also gives out Human Comfortable Safety Indice (HCSI) (https://doi.org/10.1007/s12369-016-0352-0) values of robot to measure the affectiveness of social navigation.
@@ -14,7 +14,7 @@ Few things to know about this project:
   - Uses social_navigation_layer for social layer  (http://wiki.ros.org/social_navigation_layers),
   - Uses people for leg detection (http://wiki.ros.org/people). leg_detection uses sensor info to guess where the legs are on the map.
 
-You can launch the project by calling "roslaunch Social_Robot_Nav master.launch". You can also find configuration and launch file for gmapping (http://wiki.ros.org/gmapping) in this project. 
+You can launch the project by calling "roslaunch social_robot_nav master.launch". You can also find configuration and launch file for gmapping (http://wiki.ros.org/gmapping) in this project. 
 
 Usefull information:
   - In .bashrc you can add this lines to make your work easier:

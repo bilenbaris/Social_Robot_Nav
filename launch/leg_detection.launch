@@ -1,5 +1,5 @@
 <launch>
   <node pkg="leg_detector" type="leg_detector" name="leg_detector"
         args="scan:=scan" output="screen"/>
-        <rosparam file="$(find guided_research)/config/leg_detection_params.yaml" command="load" />
+        <rosparam file="$(find social_robot_nav)/config/leg_detection_params.yaml" command="load" />
 </launch>
