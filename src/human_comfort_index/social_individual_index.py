@@ -40,6 +40,6 @@ if __name__ == '__main__':
     control_publisher = rospy.Publisher('sii_control', Float32, queue_size=10)
     
     rospy.Subscriber("/people", People, people_callback)
-    # rospy.Subscriber('/amcl_pose', PoseWithCovarianceStamped, pose_callback)
+
     
     rospy.spin()

@@ -38,7 +38,6 @@
 
   <!-- People Publisher -->
   <node pkg="social_robot_nav" type="peoplePublisher.py" name="peoplePublisher"/>
-  <!-- <node pkg="social_robot_nav" type="personPublisher.py" name="personPublisher"/> -->
 
   <!-- Social Individual Index -->
   <node pkg="social_robot_nav" type="social_individual_index.py" name="social_individual_index"/>
